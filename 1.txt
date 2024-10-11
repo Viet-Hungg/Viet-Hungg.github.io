@@ -1,0 +1,30 @@
+#include<stdio.h>
+void swap(void *a, void *b, int n);
+main(){
+  int i = 10, j = 20;
+  float x = 12.5, y = 53.5;
+  printf("i = %d, j = %d\n", i, j);
+  printf("x = %f, y = %f\n\n", x, y);
+
+  swap(&i, &j, sizeof(int));
+  printf("After interchanging\n");
+  printf("i = %d, j = %d\n", i, j);
+
+  swap(&x, &y, sizeof(float));
+  printf("x = %f, y = %f\n", x, y);
+}
+/* Generic function to interchange two variables */
+void swap(void *a, void *b, int n){
+   char *p, *q, temp;
+   p = (char*)a;
+   q = (char*)b;
+
+   while(n>0){
+      temp = *p;
+      *p = *q;
+      *q = temp;
+      p++;
+      q++;
+      n--;
+   }
+}
