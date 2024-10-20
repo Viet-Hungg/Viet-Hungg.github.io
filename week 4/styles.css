@@ -1,0 +1,16 @@
+.todolist{
+    margin: 0 auto;
+  width: 500px;
+  border: 1px solid black;
+  padding: 8px 24px;
+  background:yellow;
+  font-size: 30px;
+  box-shadow: 0 0 10px 2px #333333;
+
+}
+.todolist ol{
+    
+    margin: 12px;}
+.todolist p{
+    text-align: center;
+}    
