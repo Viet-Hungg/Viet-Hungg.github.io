@@ -1,0 +1,28 @@
+span#id1 {
+    color: red;
+}
+span.highlight {
+    background-color: yellow;
+    color: blue;
+}
+#id2{
+    color: green;
+} 
+
+p+p {
+    font-size: italic;
+    font-weight: bold;
+}
+div.items>a {
+    color: green;
+    font-weight: bold;
+}
+.red {
+    color: red
+}
+.underline{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
+}
