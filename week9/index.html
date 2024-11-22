@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculate </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Demo</h1>
+    <input type="text" id="a_value">
+    <input type="text" id="b_value">
+    <div>
+        <button type="button" onclick="calculate('+')">+</button>
+        <button type="button" onclick="calculate('-')">-</button>
+        <button type="button" onclick="calculate('*')">*</button>
+        <button type="button" onclick="calculate('/')">/</button>
+    </div>
+    <p id="result"></p>
+    <script>
+        function calculate(operation) {
+            var a = parseFloat(document.getElementById("a_value").value);
+            var b = parseFloat(document.getElementById("b_value").value);
+            var result;
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").textContent = "Please enter valid numbers";
+                return;
+            }
+            switch(operation) {
+                case '+':
+                    result = a + b;
+                    break;
+                case '-':
+                    result = a - b;
+                    break;
+                case '*':
+                    result = a * b;
+                    break;
+                case '/':
+                    if (b == 0) {
+                        document.getElementById("result").textContent = "Cannot divide by zero";
+                        return;
+                    }
+                    result = a / b;
+                    break;
+            }
+            document.getElementById("result").textContent = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
