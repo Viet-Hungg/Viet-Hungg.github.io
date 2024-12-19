@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #d61818;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 1rem 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#main-header {
+    color: #e50914;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffffff;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.featured-article {
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8) 0%, rgba(20, 20, 20, 0.4) 100%), url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg') no-repeat center center / cover;
+    padding: 4rem 4%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.featured-article h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.featured-article p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 0 4%;
+}
+
+.review {
+    background-color: #1f1f1f;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: scale(1.02);
+}
+
+.review h3 {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.review-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.review-content img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-details {
+    flex: 1;
+    min-width: 200px;
+}
+
+.review-details p {
+    margin-bottom: 0.5rem;
+}
+
+.review-details a {
+    color: #4dbeff;
+    text-decoration: none;
+}
+
+.review-details a:hover {
+    text-decoration: underline;
+}
+
+.review-highlights {
+    flex-basis: 100%;
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.review-highlights li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.review-highlights li::before {
+    content: "•";
+    color: #e50914;
+    position: absolute;
+    left: 0;
+}
+
+footer {
+    background-color: #141414;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .featured-article {
+        padding: 2rem 4%;
+    }
+
+    .featured-article h2 {
+        font-size: 2rem;
+    }
+
+    .featured-article p {
+        font-size: 1rem;
+    }
+
+    .review-content {
+        flex-direction: column;
+    }
+
+    .review-content img {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
