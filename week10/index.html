@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button type="button" onclick="show(0)">Show content 1</button>
+    <button type="button" onclick="show(1)">Show content 2</button>
+    <button type="button" onclick="show(2)">Show content 3</button>
+    <div class="tab-content">
+        <h2>Content 1</h2>
+        <p>This is content 1</p>
+    </div>
+    <div class="tab-content">
+        <h2>Content 2</h2>
+        <p>This is content 2</p>
+    </div>
+    <div class="tab-content">
+        <h2>Content 3</h2>
+        <p>This is content 3</p>
+    </div>
+    <script>
+        function show(tabIndex){
+            const content = document.querySelectorAll('.tab-content');
+            content.forEach{
+                content.classlist.remove('active');
+            }
+        };
+        content(tabIndex).classlist.add('active');
+    </script>
+</body>
+</html>
